@@ -1,0 +1,46 @@
+.page-wrapper {
+    background-color: #fff;
+    margin:0 auto;
+    
+    .header {
+        padding: $embox;
+    }  
+    
+    .main-content, .sidebar, .footer {
+        padding: $embox;
+    }
+
+    .footer .copyright {
+        text-align: center;
+    }
+}
+
+.header {
+    background-color: #ccc;
+}
+
+@media only screen and (min-width: $breakpoint_multicolumn) {
+    
+    .page-wrapper {
+        overflow: hidden;        
+        max-width: 1280px;
+        
+        // for a 2 column layout (sidebar on the left + main cont on the right
+        &.two-column-layout {
+            .main-content {
+                float:right;
+                max-width: 70%;
+            }
+
+            .sidebar {
+                float:left;
+                max-width: 30%;
+            }
+                
+            .footer {
+                clear: both;
+            }
+        }
+
+    }
+}

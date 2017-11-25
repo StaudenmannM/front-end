@@ -1,0 +1,31 @@
+html { 
+    box-sizing: border-box;
+    font-size: 62.5%; // simplify font calculation
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: $color-background;
+    font-family: $font-default;
+    font-size: $font-size;
+    line-height: $line-height-default;
+}
+
+// Links with correct pseudo class order (LoVe For HAte
+a { color:$color-link; }
+a:link {}
+a:visited { color:$color-link-visited; }
+a:focus {}
+a:hover {}
+a:active {}
+
+a img, img { border: 0; max-width: 100%; }
+figure img { display: block; }
+
+// For legacy browsers that don't understand HTML5
+section, article, aside, footer, header, nav {
+    display: block;
+}

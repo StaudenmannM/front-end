@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="js">
+
+<head>
+	<meta charset="utf-8" />
+	<title>{{ title }} {% if websiteName %} | {{ websiteName }} {% endif %}</title>
+	<meta name="description" content="The page about {{ title }}" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="all" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+	<div class="skipper">
+		<a id="content-toggler" href="#content">Skip to Content</a>
+	</div>
+	<div class='page-wrapper {{ layoutType }}'>
+		<header class="header" role="banner">
+			<a id="logo" class="logo" href="/"><img src="holder.js/300x200" alt="Logo" /></a>
+			<h1>{{ websiteName }}</h1>
+			{% block topnav %}{% endblock %}
+		</header>
+		<article id="content" class="main-content">
+			{% block content %}{% endblock %}
+		</article>
+		<aside class="sidebar">
+			{% block sidebar %}{% endblock %}
+		</aside>
+		<footer  class="footer">
+			<p class="copyright">&#169; 2017 Michael Staudenmann</p>
+			{% block footer %}{% endblock %}
+		</footer>
+	</div>
+
+	<script type="text/javascript">isIE8 = null;</script>
+	<!--[if IE 8]><script type="text/javascript">isIE8 = true;</script><![endif]-->
+	<script type="text/javascript" src="js/main.min.js"></script>
+	<script type="text/javascript" src="js/holder.min.js"></script>
+	<script type="text/javascript" src="js/component.tabs.js"></script>
+</body>
+
+</html>

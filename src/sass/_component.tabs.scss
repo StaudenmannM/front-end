@@ -1,0 +1,54 @@
+.tab {
+  background-color: $color-white;
+
+  .tab__header {
+    margin:0;
+  }
+
+  .tab__header-item {
+    border: 1px solid transparent;
+    display: inline-block;
+    margin: 0 0 -1px 0;
+    padding: $embox;
+    text-align: center;
+    
+    &::before {
+      //content:'O';
+    }
+
+    a {
+      color: $color-grey-bbb;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color:$color-grey-888;
+    }
+
+    &.is-active {
+      border:1px solid $color-grey-ddd;
+      border-top: 3px solid orange;
+      border-bottom: 1px solid $color-white;
+
+      a {
+       color: $color-grey-555;
+      }
+    }
+  }
+
+
+  .tab__panel {
+    display:none;
+
+    &.is-active {
+      display: block;
+      padding: $embox $embox/2 $embox $embox*1.5;
+      border-top: 1px solid $color-grey-ddd;
+    }
+  }
+
+  // Themes
+  &.tab--tab-error {
+    background-color:red;
+  }
+}

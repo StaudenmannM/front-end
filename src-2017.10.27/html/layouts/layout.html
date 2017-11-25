@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+	<meta charset="utf-8" />
+	<title>{{ title }}</title>
+	<meta name="description" content="The page about {{ title }}" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="all" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+	<div class="skipper">
+		<a id="content-toggler" href="#content">Skip to Content</a>
+	</div>
+	<header class="header" role="banner">
+		<a id="logo" class="logo" href="/"><img src="holder.js/300x200" alt="Logo" /></a>
+		<div id="top-navigation" class="top-navigation">
+			&nbsp;
+		</div>
+	</header>
+
+	<div id="content" class="content">
+		<div class="main-content">
+			{% block content %}
+			{% endblock %}
+		</div>
+		<div class="sidebar">
+			&nbsp;
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="copyright">&#169; Michael Staudenmann</div>
+	</footer>
+
+	<script type="text/javascript">isIE8 = null;</script>
+	<!--[if IE 8]><script type="text/javascript">isIE8 = true;</script><![endif]-->
+	<script type="text/javascript" src="js/main.min.js"></script>
+	<script type="text/javascript" src="js/holder.min.js"></script>
+	<script type="text/javascript" src="js/component.tabs.js"></script>
+</body>
+</html>

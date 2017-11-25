@@ -1,0 +1,38 @@
+.required {
+    color: $color-required;
+}
+
+fieldset, label, input, textarea {
+    display: block;
+}
+
+input {
+    padding: $embox/2;
+}
+
+textarea {
+    padding: $embox/2;
+    resize: vertical;
+}
+
+
+.form-field { border:2px solid $color-field;}
+
+.form-field :invalid { border:2px solid $color-error;}
+
+.form-field :valid { border:2px solid $color-valid;}
+
+.multi-step-form {
+
+}
+
+
+.js {
+    .form-multi-steps .step {
+        display: none;
+    }
+
+    .form-multi-steps .step.current {
+        display: block;
+    }
+}

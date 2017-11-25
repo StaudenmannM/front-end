@@ -1,0 +1,45 @@
+.nav-list-horizontal {
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+
+        li {
+            border: 1px solid #fff;
+            border-radius: $embox/2;
+            margin: $embox/2;
+            a {
+                display: block;
+                padding: $embox;                
+            }
+        }
+    }
+
+    &.nav-top {      
+        ul {
+            justify-content: center;
+            
+            li {
+                background-color: #fff;            }
+        }
+    }
+
+    &.nav-footer {
+        ul {
+            justify-content: flex-end;
+            
+            li {
+                background-color: #000;
+                
+                a {
+                    color:#fff;
+                    padding: $embox/2 $embox;
+                    text-decoration: none;
+                }
+             }
+        }
+    }
+        
+}
